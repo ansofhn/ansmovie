@@ -14,6 +14,10 @@ module.exports = {
         raleway: ["Raleway", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      colors: {
+        bgColor: "#20212B",
+        darkGray: "#252631"
+      },
     },
   },
   plugins: [],

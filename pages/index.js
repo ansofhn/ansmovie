@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { getMovieList, searchMovie } from "../repository/api";
+import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -37,10 +39,18 @@ const Home = () => {
   console.log({ popularMovies: popularMovies });
 
   return (
-    <div className="bg-black">
+    <div className="bg-bgColor">
       <Head>
         <title>Home | AnsMovie</title>
       </Head>
+
+      {/* Appearance Website*/}
+
+      <Navbar />
+      <ScrollToTop />
+
+      {/* Appearance Website*/}
+
       <div className="py-5 text-4xl font-bold text-center text-gray-100 uppercase">
         ansmovie
       </div>
