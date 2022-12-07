@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../public/assets/logo_cream.svg";
+import Logo from "../public/assets/logo.svg";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
           <div className="flex gap-2 lg:order-2">
             <Link href={"https://wa.link/a0gqrg"}>
-              <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-xl sm:py-2 sm:text-sm sm:px-10 bg-background hover:bg-softCream hover:text-darkGray">
+              <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray">
                 sign in
               </button>
             </Link>

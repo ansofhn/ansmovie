@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { HiArrowUp } from "react-icons/hi";
+import { MdKeyboardArrowUp } from "react-icons/md";
 
 const ScrollToTop = () => {
   const [backToTop, setBackToTop] = useState(false);
@@ -24,10 +24,10 @@ const ScrollToTop = () => {
     <>
       {backToTop && (
         <button
-          className="fixed flex items-center justify-center p-2 transition-all duration-1000 ease-in bg-gray-300 rounded-full shadow-2xl w-11 h-11 bottom-4 right-4 lg:bottom-12 lg:right-10 "
+          className="fixed flex items-center justify-center p-2 transition-all duration-1000 ease-in rounded-full shadow-2xl bg-softCream w-11 h-11 bottom-4 right-4 lg:bottom-12 lg:right-10 "
           onClick={scrollUp}
         >
-          <HiArrowUp className="text-xl font-medium text-white" />
+          <MdKeyboardArrowUp className="text-xl font-bold text-darkGray" />
         </button>
       )}
     </>

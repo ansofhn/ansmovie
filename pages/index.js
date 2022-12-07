@@ -51,10 +51,7 @@ const Home = () => {
 
       {/* Appearance Website*/}
 
-      <div className="py-5 text-4xl font-bold text-center text-gray-100 uppercase">
-        ansmovie
-      </div>
-      <div className="text-center">
+      <div className="py-40 text-center bg-backGround">
         <input
           placeholder="Search film.."
           className="p-2 my-2 bg-gray-100"
