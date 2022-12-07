@@ -3,6 +3,8 @@ import Head from "next/head";
 import { getMovieList, searchMovie } from "../repository/api";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -39,7 +41,7 @@ const Home = () => {
   console.log({ popularMovies: popularMovies });
 
   return (
-    <div className="bg-bgColor">
+    <div className="bg-backGround">
       <Head>
         <title>Home | AnsMovie</title>
       </Head>
@@ -47,11 +49,12 @@ const Home = () => {
       {/* Appearance Website*/}
 
       <Navbar />
+      <Hero />
       <ScrollToTop />
 
       {/* Appearance Website*/}
 
-      <div className="py-40 text-center bg-backGround">
+      <div className="py-20 text-center bg-black/20">
         <input
           placeholder="Search film.."
           className="p-2 my-2 bg-gray-100"
@@ -61,6 +64,8 @@ const Home = () => {
           <PopularMovieList />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

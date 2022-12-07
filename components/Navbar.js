@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 z-10 w-full bg-darkGray">
-        <div className="container flex flex-wrap items-center justify-between mx-auto">
+        <div className="container flex flex-wrap items-center justify-between mx-auto lg:px-12 xl:px-0">
           <Link href={"/"}>
             <div className="flex items-center py-6 cursor-pointer gap-x-2">
               <div className="w-11">
