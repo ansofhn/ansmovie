@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../public/assets/logo.png";
+import Logo from "../public/assets/logo_cream.svg";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -14,16 +14,18 @@ const Navbar = () => {
       <nav className="fixed top-0 z-10 w-full bg-darkGray">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href={"/"}>
-            <div className="flex items-center px-4 py-2 cursor-pointer gap-x-2">
-              <Image width={46} height={46} src={Logo} />
-              <div className="py-5 text-2xl font-bold text-center text-gray-100 uppercase">
-                ansmovie
+            <div className="flex items-center py-6 cursor-pointer gap-x-2">
+              <div className="w-11">
+                <Image src={Logo} />
+              </div>
+              <div className="text-2xl font-bold text-center text-white">
+                Movsoft
               </div>
             </div>
           </Link>
-          <div className="flex gap-2 md:order-2 sm:mr-0">
+          <div className="flex gap-2 lg:order-2">
             <Link href={"https://wa.link/a0gqrg"}>
-              <button className="px-3 py-2 text-xs font-bold text-gray-100 uppercase transition duration-300 border-2 border-gray-100 cursor-pointer rounded-xl sm:py-2 sm:text-sm sm:px-10 bg-bgColor hover:bg-gray-100 hover:text-darkGray">
+              <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-xl sm:py-2 sm:text-sm sm:px-10 bg-background hover:bg-softCream hover:text-darkGray">
                 sign in
               </button>
             </Link>
@@ -31,7 +33,7 @@ const Navbar = () => {
               onClick={() => {
                 setOpen(!open);
               }}
-              className="inline-flex items-center p-2 text-sm rounded-lg text-maroon md:hidden hover:bg-gray-100 focus:outline-none focus:ring-0"
+              className="inline-flex items-center p-2 text-sm text-white rounded-lg lg:hidden focus:outline-none focus:ring-0"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -50,60 +52,60 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className={`pb-3 md:pb-0 xl:ml-96 2xl:ml-[600px] items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+            className={`pb-3 lg:pb-0 xl:ml-96 2xl:ml-[600px] items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${
               open ? "visible" : "hidden"
             }`}
           >
-            <ul className="flex flex-col gap-1 mt-4 rounded-lg md:flex-row md:space-x-4 md:mt-0 md:text-sm md:font-medium md:border-0">
+            <ul className="flex flex-col gap-1 my-4 text-sm rounded-lg lg:flex-row lg:space-x-4 lg:my-0 lg:font-medium lg:border-0">
               <li>
                 <Link href={"/"}>
                   <h2
-                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md md:text-textColor  ${
+                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md  ${
                       currentRoute === "/"
-                        ? "md:bg-maroon md:hover:bg-maroon md:hover:text-white hover:bg-maroon hover:text-white bg-maroon text-white md:text-white md:px-3"
-                        : "md:hover:bg-gray-100 md:hover:text-textColor hover:bg-gray-100 hover:text-textColor"
+                        ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
+                        : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
                   >
-                    Beranda
+                    Home
                   </h2>
                 </Link>
               </li>
               <li>
                 <Link href={"/about"}>
                   <h2
-                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md md:text-textColor  ${
+                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md  ${
                       currentRoute === "/about"
-                        ? "md:bg-maroon md:hover:bg-maroon md:hover:text-white hover:bg-maroon hover:text-white bg-maroon text-white md:text-white md:px-3"
-                        : "md:hover:bg-gray-100 md:hover:text-textColor hover:bg-gray-100 hover:text-textColor"
+                        ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
+                        : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
                   >
-                    Tentang
+                    Movie
                   </h2>
                 </Link>
               </li>
               <li>
                 <Link href={"/service"}>
                   <h2
-                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md md:text-textColor ${
+                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
                       currentRoute === "/service"
-                        ? "md:bg-maroon md:hover:bg-maroon md:hover:text-white hover:bg-maroon hover:text-white bg-maroon text-white md:text-white md:px-3"
-                        : "md:hover:bg-gray-100 md:hover:text-textColor hover:bg-gray-100 hover:text-textColor"
+                        ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
+                        : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
                   >
-                    Layanan
+                    About
                   </h2>
                 </Link>
               </li>
               <li>
                 <Link href={"/pricelist"}>
                   <h2
-                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md md:text-textColor ${
+                    className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
                       currentRoute === "/pricelist"
-                        ? "md:bg-maroon md:hover:bg-maroon md:hover:text-white hover:bg-maroon hover:text-white bg-maroon text-white md:text-white md:px-3"
-                        : "md:hover:bg-gray-100 md:hover:text-textColor hover:bg-gray-100 hover:text-textColor"
+                        ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
+                        : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
                   >
-                    Daftar Harga
+                    Contact
                   </h2>
                 </Link>
               </li>
