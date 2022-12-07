@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import Logo from "../public/assets/logo.svg";
-import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const router = useRouter();
@@ -29,7 +29,7 @@ const Footer = () => {
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md  ${
                       currentRoute === "/"
                         ? "hover:text-softCream bg-transparent text-softCream px-3"
-                        : "hover:text-softCream text-white hover:bg-transparent"
+                        : "hover:text-softCream text-gray-300 hover:bg-transparent"
                     }`}
                   >
                     Home
@@ -42,7 +42,7 @@ const Footer = () => {
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md  ${
                       currentRoute === "/about"
                         ? "hover:text-softCream bg-transparent text-softCream px-3"
-                        : "hover:text-softCream text-white hover:bg-transparent"
+                        : "hover:text-softCream text-gray-300 hover:bg-transparent"
                     }`}
                   >
                     Movie
@@ -55,7 +55,7 @@ const Footer = () => {
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
                       currentRoute === "/service"
                         ? "hover:text-softCream bg-transparent text-softCream px-3"
-                        : "hover:text-softCream text-white hover:bg-transparent"
+                        : "hover:text-softCream text-gray-300 hover:bg-transparent"
                     }`}
                   >
                     About
@@ -68,7 +68,7 @@ const Footer = () => {
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
                       currentRoute === "/pricelist"
                         ? "hover:text-softCream bg-transparent text-softCream px-3"
-                        : "hover:text-softCream text-white hover:bg-transparent"
+                        : "hover:text-softCream text-gray-300 hover:bg-transparent"
                     }`}
                   >
                     Contact
@@ -84,17 +84,17 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex items-center col-span-2 gap-10 text-sm text-white pt-14">
+          <div className="flex items-center col-span-2 gap-10 text-sm text-gray-300 pt-14">
             <div>FAQ</div>
             <div>Help Center</div>
             <div>Terms of Use</div>
             <div>Privacy</div>
           </div>
-          <div className="flex items-center justify-end gap-4 pt-14">
+          <div className="flex items-center justify-end gap-2 pt-14">
             <Link href={"https://www.instagram.com/josslaundry_telkomuniv/"}>
               <div
                 target={"_blank"}
-                className="p-2 mx-auto text-base text-white rounded-full hover:text-white bg-gray-500/50"
+                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
               >
                 <FaInstagram />
               </div>
@@ -102,7 +102,7 @@ const Footer = () => {
             <Link href={"https://www.tiktok.com/@josslaundry_telkomuniv"}>
               <div
                 target={"_blank"}
-                className="p-2 mx-auto text-base text-white rounded-full hover:text-white bg-gray-500/50"
+                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
               >
                 <FaTiktok />
               </div>
@@ -112,14 +112,24 @@ const Footer = () => {
             >
               <div
                 target={"_blank"}
-                className="p-2 mx-auto text-base text-white rounded-full hover:text-white bg-gray-500/50"
+                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
               >
                 <FaFacebook />
               </div>
             </Link>
+            <Link
+              href={"https://www.facebook.com/profile.php?id=100081776875466"}
+            >
+              <div
+                target={"_blank"}
+                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
+              >
+                <FaLinkedin />
+              </div>
+            </Link>
           </div>
         </div>
-        <div className="text-xs text-white bg-backGround">
+        <div className="text-xs text-gray-300 bg-backGround">
           <div className="container py-6">
             Copyright © 2022. All Rights Reserved By Movsoft
           </div>
