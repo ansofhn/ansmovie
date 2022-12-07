@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       container: {
         center: true,
+        padding: "1rem",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
@@ -15,10 +16,12 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
-        bgColor: "#20212B",
-        darkGray: "#252631"
+        background: "#2C3639",
+        darkGray: "#3F4E4F",
+        softBrown: "#A27B5C",
+        softCream: "#DCD7C9",
       },
     },
   },
   plugins: [],
-}
+};
