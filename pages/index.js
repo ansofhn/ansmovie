@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import { getMovieList, searchMovie } from "../repository/api";
+import {
+  getPopularMovieList,
+  getTopRatedMovieList,
+  searchMovie,
+} from "../repository/api";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Hero from "../components/Hero";
@@ -10,10 +14,15 @@ import { BiCameraMovie, BiMoviePlay } from "react-icons/bi";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
 
   useEffect(() => {
-    getMovieList().then((result) => {
+    getPopularMovieList().then((result) => {
       setPopularMovies(result);
+    });
+
+    getTopRatedMovieList().then((result) => {
+      setTopRatedMovies(result);
     });
   }, []);
 
@@ -46,10 +55,40 @@ const Home = () => {
     });
   };
 
+  const TopRatedMovieList = () => {
+    return topRatedMovies.map((movie, i) => {
+      return (
+        <div className="pb-10 text-white xl:w-72 2xl:w-80" key={i}>
+          <div className="overflow-hidden rounded-lg ">
+            <img
+              className="h-full"
+              src={`${process.env.NEXT_PUBLIC_BASEIMGURL}${movie.poster_path}`}
+            />
+          </div>
+          <div className="px-1 py-4">
+            <div className="flex items-center h-10 font-semibold">
+              {movie.title}
+            </div>
+          </div>
+          <div className="flex items-center justify-between px-1">
+            <div className="text-xs font-medium text-softCream">
+              {movie.release_date}
+            </div>
+            <div className="flex items-center gap-2 text-xs font-medium">
+              <AiFillLike className="text-sm text-softCream" />
+              {movie.vote_average}
+            </div>
+          </div>
+        </div>
+      );
+    });
+  };
+
   const search = async (q) => {
     if (q.length > 3) {
       const query = await searchMovie(q);
       setPopularMovies(query);
+      setTopRatedMovies(query);
     }
   };
 
@@ -99,15 +138,24 @@ const Home = () => {
 
       {/* Our Service */}
 
-      <div className="h-[80vh] bg-backGround flex items-center">
+      {/* <div className="h-[80vh] bg-backGround flex items-center">
         <div className="container grid grid-cols-2">
-          <div>asdf</div>
+          <div></div>
+          <div className="space-y-4">
+            
+          </div>
+        </div>
+      </div> */}
+
+      <div className="h-[80vh] bg-backGround flex items-center">
+        <div className="container grid grid-cols-1 md:grid-cols-2">
+          <div className=""></div>
           <div className="flex items-center text-white">
             <div className="space-y-4">
               <div className="text-xs font-semibold tracking-widest uppercase text-softCream">
                 Our Services
               </div>
-              <div className="w-5/6 text-4xl font-bold text-white">
+              <div className="w-4/5 text-4xl font-bold text-white 2xl:w-3/5">
                 Download Your Movies Watch Offline.
               </div>
               <div>
@@ -163,9 +211,8 @@ const Home = () => {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-8 pt-6 2xl:gap-16">
-            <PopularMovieList />
+            <TopRatedMovieList />
           </div>
-
         </div>
       </div>
 
