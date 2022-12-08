@@ -92,8 +92,6 @@ const Home = () => {
     }
   };
 
-  console.log({ popularMovies: popularMovies });
-
   return (
     <div className="bg-backGround">
       <Head>
@@ -110,7 +108,7 @@ const Home = () => {
 
       <div className="py-24 bg-black/20">
         <div className="container space-y-10">
-          <div className="grid grid-cols-2">
+          <div className="text-center md:text-left md:grid md:grid-cols-2">
             <div className="space-y-2">
               <div className="text-xs font-semibold tracking-widest uppercase text-softCream">
                 Online Streaming
@@ -119,7 +117,7 @@ const Home = () => {
                 Popular Movies
               </div>
             </div>
-            <div className="flex items-end justify-end">
+            <div className="flex items-center justify-center pt-10 md:pt-0 md:items-end md:justify-end">
               <div className="px-3 py-2 text-xs font-medium text-white transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround">
                 Movies
               </div>
@@ -138,16 +136,7 @@ const Home = () => {
 
       {/* Our Service */}
 
-      {/* <div className="h-[80vh] bg-backGround flex items-center">
-        <div className="container grid grid-cols-2">
-          <div></div>
-          <div className="space-y-4">
-            
-          </div>
-        </div>
-      </div> */}
-
-      <div className="h-[80vh] bg-backGround flex items-center">
+      <div className="h-screen md:h-[80vh] bg-backGround flex items-center">
         <div className="container grid grid-cols-1 md:grid-cols-2">
           <div className=""></div>
           <div className="flex items-center text-white">
@@ -155,16 +144,16 @@ const Home = () => {
               <div className="text-xs font-semibold tracking-widest uppercase text-softCream">
                 Our Services
               </div>
-              <div className="w-4/5 text-4xl font-bold text-white 2xl:w-3/5">
+              <div className="w-4/5 text-3xl font-bold text-white md:text-4xl 2xl:w-3/5">
                 Download Your Movies Watch Offline.
               </div>
-              <div>
+              <div className="text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. LoremIpsumhas been the industry's standard dummy text
                 ever since the 1500s. adskf;aimsdfjas
                 ;dlkfiasd;flaksd;flka.dfgsdfgsdfgs
               </div>
-              <div className="grid w-5/6 grid-cols-6 gap-4 pt-6">
+              <div className="grid w-full grid-cols-6 gap-4 pt-6 md:w-5/6">
                 <div className="flex items-center justify-center col-span-2">
                   <div className="p-4 text-5xl text-white border-2 rounded-full border-softCream">
                     <BiMoviePlay />
@@ -172,7 +161,7 @@ const Home = () => {
                 </div>
                 <div className="col-span-4 col-start-3 my-auto space-y-3">
                   <div className="text-lg font-bold">Enjoy on Your Movie.</div>
-                  <div>ljasdlfkjalsdfkjalskdjflaskjdfl</div>
+                  <div className="text-sm">ljasdlfkjalsdfkjalskdjflaskjdfl</div>
                 </div>
                 <div className="flex items-center justify-center col-span-2 row-start-3">
                   <div className="p-4 text-5xl text-white border-2 rounded-full border-softCream">
@@ -181,7 +170,7 @@ const Home = () => {
                 </div>
                 <div className="col-span-4 col-start-3 row-start-3 my-auto space-y-3">
                   <div className="text-lg font-bold ">Watch Everywhere.</div>
-                  <div>lkdsajflsdjkflajsdlfjalsdkjfla</div>
+                  <div className="text-sm">lkdsajflsdjkflajsdlfjalsdkjfla</div>
                 </div>
               </div>
             </div>

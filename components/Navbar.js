@@ -23,7 +23,7 @@ const Navbar = ({onSearch}) => {
               </div>
             </div>
           </Link>
-          <div className="flex gap-2 lg:order-2">
+          <div className="flex items-center gap-2 lg:order-2">
             <Link href={"https://wa.link/a0gqrg"}>
               <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray">
                 sign in
@@ -112,7 +112,7 @@ const Navbar = ({onSearch}) => {
               <li>
                 <input
                   placeholder="Find Favorite Movie"
-                  className="invisible px-4 py-2.5 ml-2 text-white lg:visible bg-backGround rounded-2xl focus:outline-none"
+                  className="px-4 py-2.5 mt-4 md:mt-0 md:ml-2 text-white w-full bg-backGround rounded-lg md:rounded-2xl focus:outline-none"
                   onChange={onSearch}
                 />
               </li>

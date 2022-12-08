@@ -14,7 +14,7 @@ const Hero = () => {
           </div> */}
           <div className="my-auto space-y-4">
             <div className="text-xl font-bold text-softCream">Movsoft</div>
-            <div className="text-3xl font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+            <div className="text-4xl font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
               Unlimited Movie, TV Shows, & More.
             </div>
             <div className="py-4 text-white">
