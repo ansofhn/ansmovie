@@ -5,7 +5,7 @@ import React from "react";
 import Logo from "../public/assets/logo.svg";
 import { FaInstagram, FaTiktok, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({onSearch}) => {
   const router = useRouter();
   const currentRoute = router.pathname;
 
@@ -78,8 +78,8 @@ const Footer = () => {
               <li>
                 <input
                   placeholder="Find Favorite Movie"
-                  className="px-4 py-3 ml-2 bg-backGround rounded-xl"
-                  onChange={({ target }) => search(target.value)}
+                  className="px-4 py-3 ml-2 text-white bg-backGround rounded-xl focus:outline-none"
+                  onChange={onSearch}
                 />
               </li>
             </ul>
