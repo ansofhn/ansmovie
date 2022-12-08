@@ -21,7 +21,7 @@ const Footer = ({ onSearch }) => {
               Movsoft
             </div>
           </div>
-          <div className="flex items-center justify-end col-span-3">
+          <div className="flex items-center justify-center col-span-3 md:justify-end">
             <div className="grid grid-cols-1 md:flex">
               <div className="flex items-center justify-center col-span-2 md:mr-10">
                 <ul className="flex flex-row items-center justify-center w-full gap-5 my-4 text-sm rounded-lg lg:space-x-4 lg:my-0 lg:font-medium lg:border-0">
