@@ -4,7 +4,7 @@ import Logo from "../public/assets/logo.svg";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-const Navbar = () => {
+const Navbar = ({onSearch}) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
           <div className="flex gap-2 lg:order-2">
             <Link href={"https://wa.link/a0gqrg"}>
-              <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray">
+              <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray">
                 sign in
               </button>
             </Link>
@@ -52,11 +52,11 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className={`pb-3 lg:pb-0 xl:ml-96 2xl:ml-[600px] items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${
+            className={`pb-3 lg:pb-0 xl:ml-80 2xl:ml-[600px] items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${
               open ? "visible" : "hidden"
             }`}
           >
-            <ul className="flex flex-col gap-1 my-4 text-sm rounded-lg lg:flex-row lg:space-x-4 lg:my-0 lg:font-medium lg:border-0">
+            <ul className="flex flex-col gap-1 my-4 text-sm rounded-lg lg:items-center lg:flex-row lg:space-x-4 lg:my-0 lg:font-medium lg:border-0">
               <li>
                 <Link href={"/"}>
                   <h2
@@ -108,6 +108,13 @@ const Navbar = () => {
                     Contact
                   </h2>
                 </Link>
+              </li>
+              <li>
+                <input
+                  placeholder="Find Favorite Movie"
+                  className="invisible px-4 py-2.5 ml-2 text-white lg:visible bg-backGround rounded-2xl focus:outline-none"
+                  onChange={onSearch}
+                />
               </li>
             </ul>
           </div>
