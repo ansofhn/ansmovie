@@ -12,7 +12,7 @@ const Navbar = ({onSearch}) => {
   return (
     <>
       <nav className="fixed top-0 z-10 w-full bg-darkGray">
-        <div className="container flex flex-wrap items-center justify-between mx-auto lg:px-12 xl:px-0">
+        <div className="container flex flex-wrap items-center justify-between mx-auto md:px-4 lg:px-10 xl:px-0">
           <Link href={"/"}>
             <div className="flex items-center py-6 cursor-pointer gap-x-2">
               <div className="w-11">
@@ -112,7 +112,7 @@ const Navbar = ({onSearch}) => {
               <li>
                 <input
                   placeholder="Find Favorite Movie"
-                  className="px-4 py-2.5 mt-4 md:mt-0 md:ml-2 text-white w-full bg-backGround rounded-lg md:rounded-2xl focus:outline-none"
+                  className="px-4 py-2.5 mt-4 lg:mt-0 lg:ml-2 text-white w-full bg-backGround rounded-lg md:rounded-2xl focus:outline-none"
                   onChange={onSearch}
                 />
               </li>
