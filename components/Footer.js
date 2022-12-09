@@ -12,7 +12,7 @@ const Footer = ({ onSearch }) => {
   return (
     <div>
       <div className="bg-darkGray">
-        <div className="container grid grid-cols-1 py-20 md:grid-cols-4">
+        <div className="container grid grid-cols-1 py-20 md:grid-cols-4 lg:px-12 xl:px-4">
           <div className="flex items-center justify-center pb-10 cursor-pointer md:pb-0 md:justify-start gap-x-2">
             <div className="w-11">
               <Image src={Logo} />
@@ -22,7 +22,7 @@ const Footer = ({ onSearch }) => {
             </div>
           </div>
           <div className="flex items-center justify-center col-span-3 md:justify-end">
-            <div className="grid grid-cols-1 md:flex">
+            <div className="grid grid-cols-1 md:flex md:items-center">
               <div className="flex items-center justify-center col-span-2 md:mr-10">
                 <ul className="flex flex-row items-center justify-center w-full gap-5 my-4 text-sm rounded-lg lg:space-x-4 lg:my-0 lg:font-medium lg:border-0">
                   <li>
@@ -136,7 +136,7 @@ const Footer = ({ onSearch }) => {
           </div>
         </div>
         <div className="text-xs text-center text-gray-300 md:text-left bg-backGround">
-          <div className="container py-6">
+          <div className="container py-6 lg:px-12 xl:px-4">
             Copyright © 2022. All Rights Reserved By Movsoft
           </div>
         </div>
