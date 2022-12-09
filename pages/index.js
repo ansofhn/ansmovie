@@ -29,7 +29,7 @@ const Home = () => {
   const PopularMovieList = () => {
     return popularMovies.map((movie, i) => {
       return (
-        <div className="pb-10 text-white xl:w-72 2xl:w-80" key={i}>
+        <div className="pb-10 text-white md:w-80 lg:w-72 2xl:w-80" key={i}>
           <div className="overflow-hidden rounded-lg ">
             <img
               className="h-full"
@@ -58,7 +58,7 @@ const Home = () => {
   const TopRatedMovieList = () => {
     return topRatedMovies.map((movie, i) => {
       return (
-        <div className="pb-10 text-white xl:w-72 2xl:w-80" key={i}>
+        <div className="pb-10 text-white md:w-80 lg:w-72 2xl:w-80" key={i}>
           <div className="overflow-hidden rounded-lg ">
             <img
               className="h-full"
@@ -95,7 +95,7 @@ const Home = () => {
   return (
     <div className="bg-backGround">
       <Head>
-        <title>Home | AnsMovie</title>
+        <title>Home - Movsoft</title>
       </Head>
 
       {/* Appearance Website*/}
@@ -108,7 +108,7 @@ const Home = () => {
 
       <div className="py-24 bg-black/20">
         <div className="container space-y-10">
-          <div className="text-center md:text-left md:grid md:grid-cols-2">
+          <div className="text-center md:text-left md:grid md:grid-cols-2 md:px-6 lg:px-8 xl:px-0">
             <div className="space-y-2">
               <div className="text-xs font-semibold tracking-widest uppercase text-softCream">
                 Online Streaming
@@ -204,7 +204,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <Footer onSearch={({ target }) => search(target.value)} />
     </div>
   );
