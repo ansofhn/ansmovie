@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import Logo from "../public/assets/logo.svg";
-import { FaInstagram, FaTiktok, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = ({ onSearch }) => {
   const router = useRouter();
@@ -91,45 +91,35 @@ const Footer = ({ onSearch }) => {
             </div>
           </div>
           <div className="flex items-center justify-center col-span-3 gap-5 text-sm text-gray-300 pt-14 md:justify-start md:gap-10">
-            <div>FAQ</div>
-            <div>Help Center</div>
-            <div>Terms of Use</div>
-            <div>Privacy</div>
+            <div className="transition cursor-pointer hover:text-softCream duration-400">FAQ</div>
+            <div className="transition cursor-pointer hover:text-softCream duration-400">Help Center</div>
+            <div className="transition cursor-pointer hover:text-softCream duration-400">Terms of Use</div>
+            <div className="transition cursor-pointer hover:text-softCream duration-400">Privacy</div>
           </div>
           <div className="flex items-center justify-center gap-4 pt-10 md:gap-2 md:justify-end md:pt-14">
-            <Link href={"https://www.instagram.com/josslaundry_telkomuniv/"}>
-              <div
-                target={"_blank"}
-                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
-              >
+            <Link href={"https://www.instagram.com/ansofhn/"} target={"_blank"}>
+              <div className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-softCream bg-backGround transition duration-400">
                 <FaInstagram />
               </div>
             </Link>
-            <Link href={"https://www.tiktok.com/@josslaundry_telkomuniv"}>
-              <div
-                target={"_blank"}
-                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
-              >
-                <FaTiktok />
-              </div>
-            </Link>
             <Link
-              href={"https://www.facebook.com/profile.php?id=100081776875466"}
+              href={"https://www.facebook.com/ansof.habibunnadjar.9/"}
+              target={"_blank"}
             >
-              <div
-                target={"_blank"}
-                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
-              >
+              <div className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-softCream bg-backGround transition duration-400">
                 <FaFacebook />
               </div>
             </Link>
+            <Link href={"https://github.com/ansofhn"} target={"_blank"}>
+              <div className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-softCream bg-backGround transition duration-400">
+                <FaGithub />
+              </div>
+            </Link>
             <Link
-              href={"https://www.facebook.com/profile.php?id=100081776875466"}
+              href={"https://www.linkedin.com/in/ansofhn/"}
+              target={"_blank"}
             >
-              <div
-                target={"_blank"}
-                className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-gray-300 bg-backGround"
-              >
+              <div className="p-2.5 mx-auto text-base text-gray-300 rounded-full hover:text-softCream bg-backGround transition duration-400">
                 <FaLinkedin />
               </div>
             </Link>
@@ -137,7 +127,7 @@ const Footer = ({ onSearch }) => {
         </div>
         <div className="text-xs text-center text-gray-300 md:text-left bg-backGround">
           <div className="container py-6 lg:px-12 xl:px-4">
-            Copyright © 2022. All Rights Reserved By Movsoft
+            Copyright © 2022. All Rights Reserved By <span className="font-medium text-softCream">Movsoft</span>
           </div>
         </div>
       </div>
