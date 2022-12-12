@@ -28,32 +28,39 @@ const Home = () => {
   }, []);
 
   const PopularMovieList = () => {
-    return popularMovies.map((movie, i) => {
-      return (
-        <div className="pb-10 text-white md:w-80 lg:w-72 2xl:w-80" key={i}>
-          <div className="overflow-hidden rounded-lg ">
-            <img
-              className="h-full"
-              src={`${process.env.NEXT_PUBLIC_BASEIMGURL}${movie.poster_path}`}
-            />
-          </div>
-          <div className="px-1 py-4">
-            <div className="flex items-center h-10 font-semibold">
-              {movie.title}
+    return (
+      <div className="flex gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
+        {popularMovies.map((movie, i) => {
+          return (
+            <div
+              className="pb-10 text-white w-[343px] md:w-80 lg:w-72 2xl:w-80"
+              key={i}
+            >
+              <div className="overflow-hidden rounded-lg w-[343px] md:w-80 lg:w-72 2xl:w-80 h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]">
+                <img
+                  className="h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]"
+                  src={`${process.env.NEXT_PUBLIC_BASEIMGURL}${movie.poster_path}`}
+                />
+              </div>
+              <div className="px-1 py-4">
+                <div className="flex items-center h-10 font-semibold">
+                  {movie.title}
+                </div>
+              </div>
+              <div className="flex items-center justify-between px-1">
+                <div className="text-xs font-medium text-softCream">
+                  {movie.release_date}
+                </div>
+                <div className="flex items-center gap-2 text-xs font-medium">
+                  <AiFillLike className="text-sm text-softCream" />
+                  {movie.vote_average}
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center justify-between px-1">
-            <div className="text-xs font-medium text-softCream">
-              {movie.release_date}
-            </div>
-            <div className="flex items-center gap-2 text-xs font-medium">
-              <AiFillLike className="text-sm text-softCream" />
-              {movie.vote_average}
-            </div>
-          </div>
-        </div>
-      );
-    });
+          );
+        })}
+      </div>
+    );
   };
 
   const TopRatedMovieList = () => {
@@ -101,7 +108,6 @@ const Home = () => {
 
       <Navbar onSearch={({ target }) => search(target.value)} />
       <Hero />
-      <ScrollToTop />
 
       {/* Popular Movies */}
 
@@ -127,7 +133,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-6 2xl:gap-16">
+          <div className="relative flex items-center">
             <PopularMovieList />
           </div>
         </div>
@@ -165,6 +171,8 @@ const Home = () => {
       </div>
 
       <Callback />
+      <ScrollToTop />
+
       <Footer onSearch={({ target }) => search(target.value)} />
     </div>
   );
