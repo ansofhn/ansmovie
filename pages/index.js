@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center">
+          <div className="relative flex items-center px-3">
             <PopularMovieList />
           </div>
         </div>
