@@ -11,7 +11,7 @@ const Hero = () => {
               Unlimited Movie, TV Shows, & More.
             </div>
             <div className="py-4 text-white">
-              lorermasdklfjlasdjfaldskfjasldkjfalsdkfj
+              Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do.
             </div>
             <button className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray">
               Watch now
