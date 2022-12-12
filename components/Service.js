@@ -5,9 +5,9 @@ import ServiceImg from "../public/assets/Service.svg";
 
 const Service = () => {
   return (
-    <div className="flex items-center bg-backGround md:px-20 lg:px-10 xl:px-0">
+    <div className="flex items-center bg-backGround md:px-32 lg:px-10 xl:px-0">
       <div className="container grid grid-cols-1 py-24 space-y-10 md:py-32 lg:space-y-0 lg:grid-cols-2">
-        <div className="flex items-center justify-center lg:justify-start 2xl:px-10">
+        <div className="flex items-center justify-center md:justify-start 2xl:px-10">
           <Image src={ServiceImg} />
         </div>
         <div className="flex items-center text-white lg:pl-10">

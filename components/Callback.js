@@ -9,7 +9,7 @@ const Callback = () => {
             <div className="text-2xl font-bold uppercase md:text-3xl">
               Trial start first 30 days.
             </div>
-            <div className="text-sm font-medium">
+            <div className="text-xs font-medium md:text-sm">
               Enter your email to create or restart your membership.
             </div>
           </div>
