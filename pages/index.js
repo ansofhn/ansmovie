@@ -29,7 +29,7 @@ const Home = () => {
 
   const PopularMovieList = () => {
     return (
-      <div className="flex gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
+      <div className="flex gap-10 md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
         {popularMovies.map((movie, i) => {
           return (
             <div
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center px-3">
+          <div className="relative flex items-center md:px-8 lg:px-8 xl:px-0">
             <PopularMovieList />
           </div>
         </div>
