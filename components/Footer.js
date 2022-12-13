@@ -39,10 +39,10 @@ const Footer = ({ onSearch }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/about"}>
+                    <Link href={"/movielist"}>
                       <h2
                         className={`block py-2 px-3 transition duration-400 font-medium rounded-md  ${
-                          currentRoute === "/about"
+                          currentRoute === "/movielist"
                             ? "hover:text-softCream bg-transparent text-softCream px-3"
                             : "hover:text-softCream text-gray-300 hover:bg-transparent"
                         }`}
@@ -52,10 +52,10 @@ const Footer = ({ onSearch }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/service"}>
+                    <Link href={"/about"}>
                       <h2
                         className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
-                          currentRoute === "/service"
+                          currentRoute === "/about"
                             ? "hover:text-softCream bg-transparent text-softCream px-3"
                             : "hover:text-softCream text-gray-300 hover:bg-transparent"
                         }`}
@@ -65,10 +65,10 @@ const Footer = ({ onSearch }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/pricelist"}>
+                    <Link href={"/contact"}>
                       <h2
                         className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
-                          currentRoute === "/pricelist"
+                          currentRoute === "/contact"
                             ? "hover:text-softCream bg-transparent text-softCream px-3"
                             : "hover:text-softCream text-gray-300 hover:bg-transparent"
                         }`}

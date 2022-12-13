@@ -71,10 +71,10 @@ const Navbar = ({onSearch}) => {
                 </Link>
               </li>
               <li>
-                <Link href={"/about"}>
+                <Link href={"/movielist"}>
                   <h2
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md  ${
-                      currentRoute === "/about"
+                      currentRoute === "/movielist"
                         ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
                         : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
@@ -84,10 +84,10 @@ const Navbar = ({onSearch}) => {
                 </Link>
               </li>
               <li>
-                <Link href={"/service"}>
+                <Link href={"/about"}>
                   <h2
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
-                      currentRoute === "/service"
+                      currentRoute === "/about"
                         ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
                         : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
@@ -97,10 +97,10 @@ const Navbar = ({onSearch}) => {
                 </Link>
               </li>
               <li>
-                <Link href={"/pricelist"}>
+                <Link href={"/contact"}>
                   <h2
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
-                      currentRoute === "/pricelist"
+                      currentRoute === "/contact"
                         ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
                         : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
