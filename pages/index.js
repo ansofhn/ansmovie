@@ -29,7 +29,7 @@ const Home = () => {
 
   const PopularMovieList = () => {
     return (
-      <div className="flex px-10 md:pl-0 gap-10 snap-x snap-mandatory md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
+      <div className="flex px-10 md:px-0 gap-10 snap-x snap-mandatory md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
         {popularMovies.map((movie, i) => {
           return (
             <div
