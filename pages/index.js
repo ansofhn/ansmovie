@@ -29,16 +29,16 @@ const Home = () => {
 
   const PopularMovieList = () => {
     return (
-      <div className="flex gap-10 snap-x snap-mandatory md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
+      <div className="flex pl-10 md:pl-0 gap-10 snap-x snap-mandatory md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
         {popularMovies.map((movie, i) => {
           return (
             <div
-              className="pb-10 snap-start text-white w-[343px] md:w-80 lg:w-72 2xl:w-80"
+              className="pb-10 snap-center md:snap-start text-white w-[320px] md:w-80 lg:w-72 2xl:w-80"
               key={i}
             >
-              <div className="overflow-hidden rounded-sm w-[343px] md:w-80 lg:w-72 2xl:w-80 h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]">
+              <div className="overflow-hidden rounded-lg w-[320px] md:w-80 lg:w-72 2xl:w-80 h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]">
                 <img
-                  className="h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]"
+                  className="h-[500px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]"
                   src={`${process.env.NEXT_PUBLIC_BASEIMGURL}${movie.poster_path}`}
                 />
               </div>
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center px-4 md:px-8 lg:px-8 xl:px-0">
+          <div className="relative flex items-center px-2 md:px-8 lg:px-8 xl:px-0">
             <PopularMovieList />
           </div>
         </div>
