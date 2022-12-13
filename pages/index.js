@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 import { AiFillLike } from "react-icons/ai";
 import Service from "../components/Service";
 import Callback from "../components/Callback";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -29,7 +30,7 @@ const Home = () => {
 
   const PopularMovieList = () => {
     return (
-      <div className="flex px-10 md:px-0 gap-10 snap-x snap-mandatory md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
+      <div id="slider" className="flex px-10 md:px-0 gap-10 snap-x snap-mandatory md:gap-8 overflow-x-scroll 2xl:gap-[74px] scroll scroll-smooth scrollbar-hide">
         {popularMovies.map((movie, i) => {
           return (
             <div
@@ -100,6 +101,16 @@ const Home = () => {
     }
   };
 
+  const slideLeft = () => {
+    var slider = document.getElementById('slider')
+    slider.scrollLeft = slider.scrollLeft - 500
+  }
+
+  const slideRight = () => {
+    var slider = document.getElementById('slider')
+    slider.scrollLeft = slider.scrollLeft + 500
+  }
+
   return (
     <div className="bg-backGround">
       <Head>
@@ -129,7 +140,14 @@ const Home = () => {
               <div className="px-3 py-2 ml-3 text-xs font-medium text-white transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround">
                 TV Show
               </div>
-              <div></div>
+              <div className={"hidden lg:flex lg:items-center lg:gap-2 lg:text-white/90 lg:ml-4"}>
+                <div onClick={slideLeft} className="p-2.5 border-2 border-white/60 rounded-full cursor-pointer">
+                  <FaChevronLeft />
+                </div>
+                <div onClick={slideRight} className="p-2.5 border-2 border-white/60 rounded-full cursor-pointer">
+                  <FaChevronRight />
+                </div>
+              </div>
             </div>
           </div>
 
