@@ -36,18 +36,18 @@ const Home = () => {
               className="pb-10 text-white w-[343px] md:w-80 lg:w-72 2xl:w-80"
               key={i}
             >
-              <div className="overflow-hidden rounded-lg w-[343px] md:w-80 lg:w-72 2xl:w-80 h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]">
+              <div className="overflow-hidden rounded-sm w-[343px] md:w-80 lg:w-72 2xl:w-80 h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]">
                 <img
                   className="h-[514.5px] md:h-[480px] lg:h-[432px] 2xl:h-[480px]"
                   src={`${process.env.NEXT_PUBLIC_BASEIMGURL}${movie.poster_path}`}
                 />
               </div>
-              <div className="px-1 py-4">
+              <div className="px-2 py-4">
                 <div className="flex items-center h-10 font-semibold">
                   {movie.title}
                 </div>
               </div>
-              <div className="flex items-center justify-between px-1">
+              <div className="flex items-center justify-between px-2">
                 <div className="text-xs font-medium text-softCream">
                   {movie.release_date}
                 </div>
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center md:px-8 lg:px-8 xl:px-0">
+          <div className="relative flex items-center px-4 md:px-8 lg:px-8 xl:px-0">
             <PopularMovieList />
           </div>
         </div>
@@ -164,7 +164,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-6 2xl:gap-16">
+          <div className="flex flex-wrap items-center justify-center gap-8 px-2 pt-6 md:px-0 2xl:gap-16">
             <TopRatedMovieList />
           </div>
         </div>
