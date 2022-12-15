@@ -52,15 +52,15 @@ const Footer = ({ onSearch }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/about"}>
+                    <Link href={"/pricing"}>
                       <h2
                         className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
-                          currentRoute === "/about"
+                          currentRoute === "/pricing"
                             ? "hover:text-softCream bg-transparent text-softCream px-3"
                             : "hover:text-softCream text-gray-300 hover:bg-transparent"
                         }`}
                       >
-                        About
+                        Pricing
                       </h2>
                     </Link>
                   </li>

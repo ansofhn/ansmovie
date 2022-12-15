@@ -84,15 +84,15 @@ const Navbar = ({onSearch}) => {
                 </Link>
               </li>
               <li>
-                <Link href={"/about"}>
+                <Link href={"/pricing"}>
                   <h2
                     className={`block py-2 px-3 transition duration-400 font-medium rounded-md ${
-                      currentRoute === "/about"
+                      currentRoute === "/pricing"
                         ? "lg:hover:text-softCream lg:bg-transparent hover:text-darkGray bg-softCream text-darkGray lg:text-softCream lg:px-3"
                         : "lg:hover:text-softCream text-white lg:hover:bg-transparent hover:bg-softCream hover:text-darkGray"
                     }`}
                   >
-                    About
+                    Pricing
                   </h2>
                 </Link>
               </li>
