@@ -17,7 +17,7 @@ const contact = () => {
         </div>
       </div>
       <Navbar />
-      <div className="container grid grid-cols-2 my-24">
+      <div className="container grid grid-cols-1 my-24 space-y-10 md:space-y-0 md:grid-cols-2">
         <form className="grid grid-cols-2 gap-8 p-2">
           <div className="col-start-1">
             <input
@@ -54,15 +54,15 @@ const contact = () => {
           <div>
             <button
               type="submit"
-              className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray"
+              className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 rounded-md cursor-pointer border-softCream sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray"
             >
               Send Message
             </button>
           </div>
         </form>
-        <div className="p-2 ml-10">
-          <div className="w-full h-full rounded-md bg-darkGray">
-            
+        <div className="p-2 md:ml-10">
+          <div className="w-full rounded-md h-80 md:h-full bg-darkGray">
+            sdgsdfg
           </div>
         </div>
       </div>
