@@ -17,19 +17,56 @@ const contact = () => {
         </div>
       </div>
       <Navbar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="container grid grid-cols-2 my-24">
+        <form className="grid grid-cols-2 gap-8 p-2">
+          <div className="col-start-1">
+            <input
+              className="text-sm p-2.5 rounded-md w-full bg-darkGray border-none focus:ring-0"
+              name="name"
+              id="name"
+              placeholder="Your name"
+            />
+          </div>
+          <div className="">
+            <input
+              className="text-sm p-2.5 rounded-md w-full bg-darkGray border-none focus:ring-0"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+            />
+          </div>
+          <div className="col-span-2">
+            <input
+              className="text-sm p-2.5 rounded-md w-full bg-darkGray border-none focus:ring-0"
+              placeholder="Subject"
+            />
+          </div>
+
+          <div className="col-span-2">
+            <textarea
+              id="message"
+              rows="8"
+              className="block p-2.5 w-full text-sm text-textColor bg-darkGray rounded-md focus:ring-0 focus:border-none border-none "
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          <div>
+            <button
+              type="submit"
+              className="px-3 py-2 text-xs font-bold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-backGround hover:bg-softCream hover:text-darkGray"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+        <div className="p-2 ml-10">
+          <div className="w-full h-full rounded-md bg-darkGray">
+            
+          </div>
+        </div>
+      </div>
+
       <Callback />
       <Footer />
       <ScrollToTop />
