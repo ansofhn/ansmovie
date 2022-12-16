@@ -10,16 +10,16 @@ export const getPopularMovieList = async () => {
   return movie.data.results;
 };
 
-export const getTopRatedMovieList = async () => {
+export const getTopRatedMovieList = async (page) => {
   const movie = await axios.get(
-    `${baseUrl}/movie/top_rated?page=1&api_key=${apiKey}`
+    `${baseUrl}/movie/top_rated?page=${page}&api_key=${apiKey}`
   );
   return movie.data.results;
 };
 
-export const getLatestMovieList = async () => {
+export const getLatestMovieList = async (page) => {
   const movie = await axios.get(
-    `${baseUrl}/movie/now_playing?page=1&api_key=${apiKey}`
+    `${baseUrl}/movie/now_playing?page=${page}&api_key=${apiKey}`
   );
   return movie.data.results;
 };

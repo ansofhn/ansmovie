@@ -14,6 +14,7 @@ import Service from "../components/Service";
 import Callback from "../components/Callback";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Pricing from "../components/Pricing";
+import { Pagination } from "antd";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -24,10 +25,16 @@ const Home = () => {
       setPopularMovies(result);
     });
 
-    getTopRatedMovieList().then((result) => {
+    getTopRatedMovieList(1).then((result) => {
       setTopRatedMovies(result);
     });
   }, []);
+
+  const changePage = (x) => {
+    getTopRatedMovieList(x).then((result) => {
+      setTopRatedMovies(result);
+    });
+  };
 
   const PopularMovieList = () => {
     return (
@@ -198,6 +205,15 @@ const Home = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-8 px-2 pt-6 md:px-0 2xl:gap-16">
             <TopRatedMovieList />
+            <Pagination
+              defaultCurrent={1}
+              onChange={changePage}
+              total={100}
+              pageSize={10}
+              className={
+                "w-full md:mx-8 lg:mx-8 xl:mx-0 2xl:mx-4 p-1 bg-white  font-semibold text-center items-center rounded-md flex justify-start"
+              }
+            />
           </div>
         </div>
       </div>

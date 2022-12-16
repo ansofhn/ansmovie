@@ -5,17 +5,22 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { getLatestMovieList } from "../repository/api";
+import { Pagination } from "antd";
 
 const movielist = () => {
   const [latestMovies, setLatestMovies] = useState([]);
 
-  console.log(latestMovies)
-
   useEffect(() => {
-    getLatestMovieList().then((result) => {
+    getLatestMovieList(1).then((result) => {
       setLatestMovies(result);
     });
   }, []);
+
+  const changePage = (x) => {
+    getLatestMovieList(x).then((result) => {
+      setLatestMovies(result);
+    });
+  };
 
   const MovieList = () => {
     return latestMovies.map((movie, i) => {
@@ -81,6 +86,14 @@ const movielist = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-8 px-2 pt-6 md:px-0 2xl:gap-16">
             <MovieList />
+            <Pagination
+              defaultCurrent={1}
+              onChange={changePage}
+              total={100}
+              className={
+                "w-full md:mx-8 lg:mx-8 xl:mx-0 2xl:mx-4 p-1 bg-white font-semibold text-center items-center rounded-md flex justify-start"
+              }
+            />
           </div>
         </div>
       </div>
