@@ -158,13 +158,13 @@ const Home = () => {
               >
                 <div
                   onClick={slideLeft}
-                  className="p-2.5 border-2 border-softCream/50 rounded-full cursor-pointer"
+                  className="p-2.5 border-2 border-softCream/70 rounded-full cursor-pointer"
                 >
                   <FaChevronLeft />
                 </div>
                 <div
                   onClick={slideRight}
-                  className="p-2.5 border-2 border-softCream/50 rounded-full cursor-pointer"
+                  className="p-2.5 border-2 border-softCream/70 rounded-full cursor-pointer"
                 >
                   <FaChevronRight />
                 </div>

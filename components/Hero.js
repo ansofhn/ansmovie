@@ -3,8 +3,8 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="bg-backGround">
-      <div className="container flex items-center w-screen h-screen lg:h-[95vh] lg:pt-10">
-        <div className="grid gap-4 mx-auto lg:grid-cols-2 lg:px-8 xl:px-0">
+      <div className="container flex items-center w-screen h-screen lg:h-[95vh] md:pt-20 lg:pt-10">
+        <div className="grid gap-4 mx-auto sm:px-3 md:grid-cols-2 lg:px-8 xl:px-0">
           <div className="my-auto space-y-4">
             <div className="text-xl font-bold text-softCream">Movsoft</div>
             <div className="text-4xl font-bold text-white md:text-3xl lg:text-4xl xl:text-6xl">
