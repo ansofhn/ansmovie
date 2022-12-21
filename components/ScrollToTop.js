@@ -24,7 +24,7 @@ const ScrollToTop = () => {
     <>
       {backToTop && (
         <button
-          className="fixed flex items-center justify-center p-2 transition-all duration-1000 ease-in rounded-full shadow-2xl bg-softCream w-11 h-11 bottom-4 right-4 lg:bottom-12 lg:right-10 "
+          className="fixed flex items-center justify-center p-2 transition-all duration-1000 ease-in rounded-full shadow-md shadow-backGround bg-softCream w-11 h-11 bottom-4 right-4 lg:bottom-12 lg:right-10 "
           onClick={scrollUp}
         >
           <MdKeyboardArrowUp className="text-xl font-bold text-darkGray" />
