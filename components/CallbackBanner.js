@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import people from "../public/assets/group_people.jpg";
 
 const CallbackBanner = () => {
   return (
@@ -21,12 +23,17 @@ const CallbackBanner = () => {
               <h2 className="text-5xl font-bold md:text-6xl">HD 4K</h2>
               <div>
                 <h2 className="text-xl font-bold md:text-3xl">50K+</h2>
-                <h3 className="text-sm font-bold md:text-base">Active Customer</h3>
+                <h3 className="text-sm font-bold md:text-base">
+                  Active Customer
+                </h3>
               </div>
             </div>
             <button className="px-3 py-2 text-xs font-semibold text-white uppercase transition duration-300 border-2 cursor-pointer border-softCream rounded-2xl sm:py-2 sm:text-sm sm:px-10 bg-softCream hover:bg-white hover:text-darkGray">
               Watch now
             </button>
+          </div>
+          <div className="flex items-center lg:scale-110 xl:scale-110 2xl:scale-105">
+            <Image src={people} />
           </div>
         </div>
       </div>
